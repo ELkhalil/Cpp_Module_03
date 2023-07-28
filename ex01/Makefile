@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/28 12:57:12 by aelkhali          #+#    #+#              #
-#    Updated: 2023/07/01 16:05:06 by aelkhali         ###   ########.fr        #
+#    Created: 2023/07/18 10:48:31 by aelkhali          #+#    #+#              #
+#    Updated: 2023/07/27 16:09:25 by aelkhali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Output Program Name
-NAME = Serena
+NAME = serena_my_love
 
 # Colors :
 GREEN = \033[0;32m

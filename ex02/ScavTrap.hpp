@@ -5,22 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/01 15:58:47 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/01 16:01:14 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/27 15:35:41 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/28 14:52:54 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
-#include <iostream>
-#include <string>
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : public ClapTrap
+{
 public:
-    ScavTrap(const std::string& name);
-    void guardGate();
+    ScavTrap    ( void );
+    ScavTrap    ( std::string const& name );
+    ScavTrap    ( ScavTrap const& other );
+    ~ScavTrap   ( void );
+
+    ScavTrap&    operator=( ScavTrap const& other );
+    void        attack(const std::string& target);
+    void        guardGate( void );
 };
 
 #endif

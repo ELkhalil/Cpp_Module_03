@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/28 12:57:12 by aelkhali          #+#    #+#              #
-#    Updated: 2023/07/01 15:34:57 by aelkhali         ###   ########.fr        #
+#    Created: 2023/07/18 10:48:31 by aelkhali          #+#    #+#              #
+#    Updated: 2023/07/27 15:33:04 by aelkhali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Output Program Name
-NAME = ClapTrap
+NAME = Aaaaand..._OPEN
 
 # Colors :
 GREEN = \033[0;32m

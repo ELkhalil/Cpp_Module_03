@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/01 16:07:52 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/01 16:08:09 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/28 12:59:58 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/28 14:53:41 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 #define FRAGTRAP_HPP
 
 #include <iostream>
-#include <string>
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap
+{
 public:
-    FragTrap(const std::string& name);
-    void highFivesGuys();
+    FragTrap    ( void );
+    FragTrap    ( std::string const& name );
+    FragTrap    ( FragTrap const& other );
+    ~FragTrap    ( void );
+    
+    FragTrap&    operator=( FragTrap const& other);
+    void        highFivesGuys(void);
 };
 
 #endif

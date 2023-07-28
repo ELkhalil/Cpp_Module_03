@@ -5,45 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/01 15:25:51 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/01 16:23:21 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/23 18:59:16 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/28 14:55:52 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+
 #include "DiamondTrap.hpp"
 
-int main() {
-    ClapTrap clapTrap("ClapTrap1");
-    clapTrap.attack("Target1");
-    clapTrap.takeDamage(5);
-    clapTrap.beRepaired(3);
+int main()
+{
+    // Create a DiamondTrap object
+    DiamondTrap diamondTrap("Sparky");
 
-    std::cout << std::endl;
+    // Test the attack() function inherited from ScavTrap
+    diamondTrap.attack("Target");
 
-    ScavTrap scavTrap("ScavTrap1");
-    scavTrap.attack("Target2");
-    scavTrap.takeDamage(30);
-    scavTrap.guardGate();
-    scavTrap.beRepaired(5);
+    // Test the takeDamage() function inherited from FragTrap
+    diamondTrap.takeDamage(15);
 
-    std::cout << std::endl;
+    // Test the beRepaired() function inherited from FragTrap
+    diamondTrap.beRepaired(10);
 
-    FragTrap fragTrap("FragTrap1");
-    fragTrap.attack("Target3");
-    fragTrap.takeDamage(50);
-    fragTrap.highFivesGuys();
-    fragTrap.beRepaired(10);
+    // Test the attack() function inherited from ScavTrap
+    diamondTrap.attack("Another Target");
 
-    std::cout << std::endl;
-
-    DiamondTrap diamondTrap("DiamondTrap1");
-    diamondTrap.ClapTrap::attack("Target4");
-    diamondTrap.FragTrap::takeDamage(20);
-    diamondTrap.ClapTrap::beRepaired(15);
+    // Test the whoAmI() function specific to DiamondTrap
     diamondTrap.whoAmI();
 
     return 0;

@@ -5,33 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/01 15:25:51 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/01 16:10:00 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/23 18:59:16 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/28 13:18:58 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main() {
-    ClapTrap clapTrap("ClapTrap1");
-    clapTrap.attack("Target1");
-    clapTrap.takeDamage(5);
-    clapTrap.beRepaired(3);
-
-    ScavTrap scavTrap("ScavTrap1");
-    scavTrap.attack("Target2");
-    scavTrap.takeDamage(30);
-    scavTrap.guardGate();
-    scavTrap.beRepaired(5);
-
-    FragTrap fragTrap("FragTrap1");
-    fragTrap.attack("Target3");
-    fragTrap.takeDamage(50);
-    fragTrap.highFivesGuys();
-    fragTrap.beRepaired(10);
-
-    return 0;
+int main( void )
+{
+    FragTrap    fragtrap("Scavo");
+    fragtrap.highFivesGuys();
+    fragtrap.attack("Axton");
+    fragtrap.takeDamage(3);
+    fragtrap.beRepaired(5);
+    fragtrap.attack("Bob");
+    fragtrap.takeDamage(20);
+    fragtrap.attack("Axton");
+    return (0);
 }

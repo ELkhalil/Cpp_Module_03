@@ -5,18 +5,54 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/01 16:12:59 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/01 16:25:04 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/28 14:08:54 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/28 14:54:11 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(const std::string& name)
-    : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), name(name) {
-    std::cout << "DiamondTrap constructor called. Name: " << name << std::endl;
+// Diamond class constructors 
+DiamondTrap::DiamondTrap    ( void )
+{
+    std::cout << "DiamondTrap Default Constructor" << std::endl;
 }
 
-void DiamondTrap::whoAmI() {
-    std::cout << "I am " << name << " and my ClapTrap name is " << ClapTrap::name << std::endl;
+DiamondTrap::DiamondTrap     ( std::string const& name ) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap()
+{
+    std::cout << "DiamondTrap Parametrized Constructor" << std::endl;
+    this->_name = name;
+    this->_hitPoints = FragTrap::_hitPoints;
+    this->_energyPoints = ScavTrap::_energyPoints;
+    this->_attackDamage = FragTrap::_attackDamage;
+}
+
+DiamondTrap::~DiamondTrap    ( void )
+{
+    std::cout << "DiamondTrap Destructor" << std::endl;
+}
+
+DiamondTrap::DiamondTrap     ( DiamondTrap const& other )
+{
+    std::cout << "DiamondTrap Copy Constructor" << std::endl;
+    (*this) = other;
+}
+
+// DiamonTrap Operators
+DiamondTrap&     DiamondTrap::operator=( DiamondTrap const& other )
+{
+    std::cout << "DiamondTrap Copy Assignment operator" << std::endl;
+    if (this != &other)
+    {
+        this->_name = other._name;
+        this->_hitPoints = other._hitPoints;
+        this->_energyPoints = other._energyPoints;
+        this->_attackDamage = other._attackDamage;
+    }
+    return (*this);
+}
+
+void            DiamondTrap::whoAmI( void )
+{
+    std::cout << "I am " << this->_name << " and my ClapTrap name is " << ClapTrap::_name << std::endl;
 }

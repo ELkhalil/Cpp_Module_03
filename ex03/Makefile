@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/28 12:57:12 by aelkhali          #+#    #+#              #
-#    Updated: 2023/07/01 16:10:27 by aelkhali         ###   ########.fr        #
+#    Created: 2023/07/18 10:48:31 by aelkhali          #+#    #+#              #
+#    Updated: 2023/07/28 14:55:12 by aelkhali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Output Program Name
-NAME = Repetitive
+NAME = Now_its_weird
 
 # Colors :
 GREEN = \033[0;32m
@@ -22,11 +22,11 @@ STOP = \033[0m
 
 # Commands And Flags :
 CPP = c++ 
-FLAGS =	-Wall -Wextra -Werror -std=c++98
+FLAGS =	-Wall -Wextra -Werror -std=c++98 -Wshadow
 RM = rm -rf
 
 # loading source files :
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 all : $(NAME)
 	@echo "You Can Use $(GREEN)*** $(NAME) ***$(STOP)"
