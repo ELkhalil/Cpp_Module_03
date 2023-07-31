@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 18:59:34 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/28 14:51:51 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 10:59:42 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,10 @@ void    ClapTrap::attack(const std::string& target)
 
 void    ClapTrap::takeDamage(unsigned int amount)
 {
-    if (this->_hitPoints > 0)
+    if (this->_hitPoints > 0 && this->_energyPoints > 0)
     {
         this->_hitPoints -= amount;
         std::cout << "ClapTrap " << this->_name << " lost " << amount << " points of damage! " << std::endl;
-        this->_energyPoints--;
     }
     else 
         std::cout << "ClapTrap " << this->_name << " can't be damaged : Not Enough Health Points" << std::endl;
@@ -79,10 +78,11 @@ void    ClapTrap::takeDamage(unsigned int amount)
 
 void    ClapTrap::beRepaired(unsigned int amount)
 {
-    if (this->_hitPoints > 0)
+    if (this->_hitPoints > 0 && this->_energyPoints > 0)
     {
         this->_hitPoints += amount;
-       std::cout << "ClapTrap " << this->_name << " Repaired " << amount << " Hit Points! " << std::endl;
+        std::cout << "ClapTrap " << this->_name << " Repaired " << amount << " Hit Points! " << std::endl;
+        this->_energyPoints--;
     }
     else
         std::cout << "ClapTrap " << this->_name << " can't be repaired : Not Enough Health Points" << std::endl;

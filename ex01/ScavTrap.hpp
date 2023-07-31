@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 15:35:41 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/28 14:52:04 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 12:03:49 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ public:
     ScavTrap    ( ScavTrap const& other );
     ~ScavTrap   ( void );
 
-    ScavTrap&    operator=( ScavTrap const& other );
-    void        attack(const std::string& target);
+    ScavTrap&   operator=( ScavTrap const& other );
+    void        attack( const std::string& target );
     void        guardGate( void );
 };
 

@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 12:59:58 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/28 14:52:47 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 12:06:36 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ public:
     FragTrap    ( void );
     FragTrap    ( std::string const& name );
     FragTrap    ( FragTrap const& other );
-    ~FragTrap    ( void );
+    ~FragTrap   ( void );
     
-    FragTrap&    operator=( FragTrap const& other);
+    FragTrap&   operator=( FragTrap const& other);
     void        highFivesGuys(void);
 };
 

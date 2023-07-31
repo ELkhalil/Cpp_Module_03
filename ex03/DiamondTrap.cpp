@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 14:08:54 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/28 14:54:11 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 11:06:04 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ DiamondTrap::DiamondTrap    ( void )
     std::cout << "DiamondTrap Default Constructor" << std::endl;
 }
 
-DiamondTrap::DiamondTrap     ( std::string const& name ) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap()
+DiamondTrap::DiamondTrap     ( std::string const& name ) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
     std::cout << "DiamondTrap Parametrized Constructor" << std::endl;
     this->_name = name;
@@ -50,6 +50,11 @@ DiamondTrap&     DiamondTrap::operator=( DiamondTrap const& other )
         this->_attackDamage = other._attackDamage;
     }
     return (*this);
+}
+
+void    DiamondTrap::attack(const std::string& target)
+{
+    ScavTrap::attack(target);
 }
 
 void            DiamondTrap::whoAmI( void )

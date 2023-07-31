@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 14:08:13 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/28 14:51:19 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 12:10:11 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ public:
     ~DiamondTrap    ( void );
     DiamondTrap     ( DiamondTrap const& other );
 
-    DiamondTrap&     operator=( DiamondTrap const& other );
+    DiamondTrap&    operator=( DiamondTrap const& other );
+    void            attack( const std::string& target );
     void            whoAmI( void );
 private:
     std::string     _name;

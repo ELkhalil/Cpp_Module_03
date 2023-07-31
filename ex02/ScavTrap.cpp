@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 15:35:43 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/28 14:53:00 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 11:59:26 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,12 @@ ScavTrap&    ScavTrap::operator=( ScavTrap const& other )
 {
     std::cout << "ScavTrap Copy Assignement operator" << std::endl;
     if (this != &other)
-        ClapTrap::operator=(other);
+    {
+        this->_name = other._name;
+        this->_hitPoints = other._hitPoints;
+        this->_energyPoints = other._energyPoints;
+        this->_attackDamage = other._attackDamage;
+    }
     return(*this);
 }
 

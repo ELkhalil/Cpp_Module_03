@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 15:35:43 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/28 14:53:24 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 12:13:42 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,19 @@ ScavTrap::ScavTrap  ( ScavTrap const& other ) : ClapTrap(other)
 
 ScavTrap::~ScavTrap ( void )
 {
-    std::cout << "ScavTrap Destructor called " << std::endl;
+    std::cout << "ScavTrap Destructor" << std::endl;
 }
 
 ScavTrap&    ScavTrap::operator=( ScavTrap const& other )
 {
     std::cout << "ScavTrap Copy Assignement operator" << std::endl;
     if (this != &other)
-        ClapTrap::operator=(other);
+    {
+        this->_name = other._name;
+        this->_hitPoints = other._hitPoints;
+        this->_energyPoints = other._energyPoints;
+        this->_attackDamage = other._attackDamage;
+    }
     return(*this);
 }
 

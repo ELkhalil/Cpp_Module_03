@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 12:59:58 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/28 14:53:41 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 12:10:26 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
     FragTrap    ( FragTrap const& other );
     ~FragTrap    ( void );
     
-    FragTrap&    operator=( FragTrap const& other);
+    FragTrap&   operator=( FragTrap const& other);
     void        highFivesGuys(void);
 };
 
