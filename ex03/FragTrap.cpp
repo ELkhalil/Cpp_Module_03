@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 13:00:08 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/31 11:28:37 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 12:37:29 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ FragTrap::FragTrap    ( std::string const& name ) : ClapTrap(name)
     this->_attackDamage = 30;
 }
 
-FragTrap::FragTrap    ( FragTrap const& other ) : ClapTrap(other)
+FragTrap::FragTrap    ( FragTrap const& other )
 {
     std::cout << "FragTrap Copy Constructor" << std::endl;
     (*this) = other;

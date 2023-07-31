@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 15:35:43 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/07/31 11:59:26 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/07/31 12:39:00 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap    ( std::string const& name ) : ClapTrap(name)
     this->_attackDamage = 20;
 }
  
-ScavTrap::ScavTrap  ( ScavTrap const& other ) : ClapTrap(other)
+ScavTrap::ScavTrap  ( ScavTrap const& other )
 {
     std::cout << "ScavTrap Copy Constructor" << std::endl;
     (*this) = other;
